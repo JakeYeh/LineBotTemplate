@@ -59,11 +59,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				f:="Hi" +text.Text +" 我是糖果"
 				_, err = bot.SendText([]string{content.From}, f)
 			}			
-			// precess Txt -- End
-			else
-			{
-				_, err = bot.SendText([]string{content.From}, "NG "+text.Text)
-			}
+
 			if err != nil {
 				log.Println(err)
 			}
